@@ -1,0 +1,53 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    font-size: 1.6rem;
+}
+
+button {
+    user-select: none;
+}
+
+img,
+input,
+label,
+textarea,
+select,
+button {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+textarea,
+input,
+button {
+    background-color: transparent;
+}
+
+.container {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    margin: 0;
+}
