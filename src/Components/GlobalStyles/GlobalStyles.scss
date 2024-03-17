@@ -10,12 +10,17 @@ html {
 }
 
 body {
+    height: 5000px;
     font-family: Poppins, sans-serif;
     font-size: 1.6rem !important;
 }
 
 button {
     user-select: none;
+
+    &:hover {
+        opacity: 0.9;
+    }
 }
 
 img,

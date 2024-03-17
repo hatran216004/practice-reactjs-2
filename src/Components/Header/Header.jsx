@@ -9,7 +9,7 @@ const Header = () => {
     const [menu, setMenu] = useState('shop');
 
     return (
-        <header className="header">
+        <header className="header fixed">
             <div className="container">
                 <div className="header-inner">
                     <div className="logo">
