@@ -1,4 +1,4 @@
-import Navbar from './Components/Navbar';
+import Header from './Components/Header';
 import { Routes, Route } from 'react-router-dom';
 import Shop from './Pages/Shop';
 import ShopCategory from './Pages/ShopCategory';
@@ -9,7 +9,7 @@ import Cart from './Pages/Cart';
 const App = () => {
     return (
         <div className="app">
-            <Navbar />
+            <Header />
             <Routes>
                 <Route path="/" element={<Shop />} />
                 <Route path="/mens" element={<ShopCategory category="mens" />} />
@@ -18,8 +18,8 @@ const App = () => {
                 <Route path="/product" element={<Product />}>
                     <Route path=":productId" element={<Product />} />
                 </Route>
+                <Route path="/login" element={<LoginSignup />} />
                 <Route path="/cart" element={<Cart />} />
-                <Route path="/loginSignup" element={<LoginSignup />} />
             </Routes>
         </div>
     );
