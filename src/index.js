@@ -4,15 +4,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Globalstyles from './Components/GlobalStyles';
 import { BrowserRouter } from 'react-router-dom';
+import ShopContextProvider from './Context/ShopContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     // <React.StrictMode>
-    <BrowserRouter>
-        <Globalstyles>
-            <App />
-        </Globalstyles>
-    </BrowserRouter>,
+    <ShopContextProvider>
+        <BrowserRouter>
+            <Globalstyles>
+                <App />
+            </Globalstyles>
+        </BrowserRouter>
+    </ShopContextProvider>,
     // </React.StrictMode>
 );
 

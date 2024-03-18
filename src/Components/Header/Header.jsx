@@ -31,10 +31,10 @@ const Header = () => {
                                 {menu === 'mens' && <span className="navbar-line"></span>}
                             </li>
                             <li className="navbar-item">
-                                <Link to="/womans" className="navbar-link" onClick={() => setMenu('womans')}>
+                                <Link to="/womens" className="navbar-link" onClick={() => setMenu('womens')}>
                                     Woman
                                 </Link>
-                                {menu === 'womans' && <span className="navbar-line"></span>}
+                                {menu === 'womens' && <span className="navbar-line"></span>}
                             </li>
                             <li className="navbar-item">
                                 <Link to="/kids" className="navbar-link" onClick={() => setMenu('kids')}>
