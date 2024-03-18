@@ -37,4 +37,23 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 80px 20px;
     }
+
+    &-loadmore {
+        margin: 40px auto 0px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 233px;
+        height: 52px;
+
+        border-radius: 999px;
+        font-size: 1.8rem;
+        font-weight: 500;
+
+        color: #fff;
+        background-color: #74ebd5;
+        background-image: linear-gradient(90deg, #74ebd5 0%, #9face6 100%);
+    }
 }

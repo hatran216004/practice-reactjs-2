@@ -37,6 +37,7 @@ const ShopCategory = ({ banner, category }) => {
                         }
                     })}
                 </div>
+                <button className="shopcategory-loadmore">Explore more</button>
             </div>
         </div>
     );
