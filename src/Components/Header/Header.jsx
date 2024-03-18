@@ -12,10 +12,10 @@ const Header = () => {
         <header className="header fixed">
             <div className="container">
                 <div className="header-inner">
-                    <div className="logo">
+                    <Link to="/" className="logo" onClick={() => setMenu('shop')}>
                         <img src={logo} alt="" />
                         <p>SHOPPER</p>
-                    </div>
+                    </Link>
                     <nav className="navbar">
                         <ul className="navbar-menu">
                             <li className="navbar-item">
@@ -45,8 +45,8 @@ const Header = () => {
                         </ul>
                     </nav>
                     <div className="navbar-login-cart">
-                        <Link to="/login">
-                            <button>Login</button>
+                        <Link to="/login" className="navbar-login-btn" onClick={() => setMenu('')}>
+                            Login
                         </Link>
                         <Link to="/cart">
                             <img src={cart_icon} alt="Cart" />

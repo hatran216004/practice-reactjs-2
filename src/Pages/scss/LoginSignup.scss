@@ -1,0 +1,132 @@
+.loginsignup {
+    --form-color: #77dae6;
+
+    margin-top: 30px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+
+    &-inner {
+        padding: 40px;
+        width: 600px;
+        border-radius: 8px;
+        border: 1px solid #b9b6b6;
+
+        h1 {
+            color: var(--form-color);
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+    }
+
+    &-agree {
+        margin-top: 25px;
+        width: 100%;
+
+        input {
+            &:checked ~ p::after {
+                display: block;
+            }
+        }
+
+        p {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            user-select: none;
+            cursor: pointer;
+            position: relative;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 17px;
+                height: 17px;
+                border-radius: 4px;
+                background-color: var(--form-color);
+            }
+
+            &::after {
+                content: '';
+                width: 12px;
+                height: 8px;
+
+                border: 3px solid transparent;
+                background-color: transparent;
+                border-left-color: #fff;
+                border-bottom-color: #fff;
+
+                position: absolute;
+                top: 2px;
+                left: 2.5px;
+                rotate: -45deg;
+                display: none;
+            }
+        }
+    }
+}
+
+.loginsignup-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-group {
+        margin-top: 25px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        label {
+            margin-bottom: 8px;
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+
+        input {
+            padding: 0 25px;
+            width: 100%;
+            height: 46px;
+            border: 1px solid var(--form-color);
+            border-radius: 6px;
+
+            &::placeholder {
+                opacity: 0.4;
+            }
+        }
+    }
+
+    &-row {
+        margin-top: 15px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--form-color);
+
+        span {
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.btn-submit {
+    margin-top: 25px;
+    width: 100%;
+    height: 46px;
+    border-radius: 6px;
+    background-color: var(--form-color);
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #fff;
+}
