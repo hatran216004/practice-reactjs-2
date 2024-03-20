@@ -1,8 +1,12 @@
 import './ProductDisplay.scss';
 import star_icon from '../assets/star_icon.png';
 import star_dull_icon from '../assets/star_dull_icon.png';
+import { useContext } from 'react';
+import { ShopContext } from '../../Context/ShopContext';
 
 const ProductDisplay = ({ product }) => {
+    const { addToCart } = useContext(ShopContext);
+
     return (
         <div className="productDisplay">
             <div className="productDisplay-left">
@@ -31,32 +35,32 @@ const ProductDisplay = ({ product }) => {
                     <div className="productDisplay-right-price-old">${product.old_price}</div>
                     <div className="productDisplay-right-price-new">${product.new_price}</div>
                 </div>
-                <div className="productDisplay-right-desc">
-                    <p className="productDisplay-right-paragraph">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores enim, molestias aperiam ab
-                        est deleniti aut earum excepturi eum debitis et nisi magnam vero alias, harum consequatur quis
-                        consequuntur quasi!
-                    </p>
-                    <div className="productDisplay-right-sizes">
-                        <h1>Select size:</h1>
-                        <div className="productDisplay-right-size">
-                            <span>S</span>
-                            <span>M</span>
-                            <span>L</span>
-                            <span>XL</span>
-                            <span>XXL</span>
-                        </div>
+                <p className="productDisplay-right-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores enim, molestias aperiam ab est
+                    deleniti aut earum excepturi eum debitis et nisi magnam vero alias, harum consequatur quis
+                    consequuntur quasi!
+                </p>
+                <div className="productDisplay-right-sizes">
+                    <h1>Select size:</h1>
+                    <div className="productDisplay-right-size">
+                        <span>S</span>
+                        <span>M</span>
+                        <span>L</span>
+                        <span>XL</span>
+                        <span>XXL</span>
                     </div>
-                    <button className="btn-add-to-cart">ADD TO CART</button>
-                    <p className="productDisplay-right-category">
-                        <span>Category:</span>
-                        Women, T-Shirt, Crop Top
-                    </p>
-                    <p className="productDisplay-right-category">
-                        <span>Tags:</span>
-                        Modern, Latest
-                    </p>
                 </div>
+                <button className="btn-add-to-cart" onClick={() => addToCart(product.id)}>
+                    ADD TO CART
+                </button>
+                <p className="productDisplay-right-category">
+                    <span>Category:</span>
+                    Women, T-Shirt, Crop Top
+                </p>
+                <p className="productDisplay-right-category">
+                    <span>Tags:</span>
+                    Modern, Latest
+                </p>
             </div>
         </div>
     );

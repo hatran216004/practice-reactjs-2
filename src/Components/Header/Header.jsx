@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import './Header.scss';
 import logo from '../assets/logo.png';
 import cart_icon from '../assets/cart_icon.png';
+import { ShopContext } from '../../Context/ShopContext';
 
 const Header = () => {
     const [menu, setMenu] = useState('shop');
+    const { getQuantityItems } = useContext(ShopContext);
 
     return (
         <header className="header fixed">
@@ -51,7 +53,7 @@ const Header = () => {
                         <Link to="/cart">
                             <img src={cart_icon} alt="Cart" />
                         </Link>
-                        <div className="navbar-cart-count">0</div>
+                        <div className="navbar-cart-count">{getQuantityItems()}</div>
                     </div>
                 </div>
             </div>

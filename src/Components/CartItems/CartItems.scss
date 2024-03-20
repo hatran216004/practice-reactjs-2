@@ -1,0 +1,129 @@
+.cartItems {
+    margin: 100px 0;
+
+    hr {
+        height: 3px;
+        background-color: #e2e2e2;
+        border: 0;
+    }
+
+    &-format {
+        font-size: 1.7rem;
+        font-weight: 500;
+
+        &-main {
+            text-align: center;
+            display: grid;
+            grid-template-columns: 0.5fr 2fr repeat(4, 1fr);
+            align-items: center;
+            gap: 70px;
+            padding: 20px 0;
+            color: #454545;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+    }
+
+    &-product-img {
+        margin: 0 auto;
+        display: block;
+        height: 70px;
+        width: 82px;
+        border-radius: 4px;
+        object-fit: cover;
+    }
+
+    &-product-name {
+        font-weight: 400;
+        line-height: 1.4;
+    }
+
+    &-remove-icon {
+        width: 15px;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+
+    &-quantity {
+        justify-self: center;
+        width: 64px;
+        height: 50px;
+        border: 2px solid #ebebeb;
+        background-color: #fff;
+    }
+
+    &-down {
+        margin: 100px 0;
+        display: flex;
+    }
+
+    &-total {
+        margin-right: 200px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+        }
+
+        &-item {
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            width: 262px;
+            height: 58px;
+            background-color: #ff5a5a;
+            color: #fff;
+            font-size: 1.6rem;
+            font-weight: 600;
+            border-radius: 999px;
+            cursor: pointer;
+        }
+    }
+
+    &-promocode {
+        font-size: 1.6rem;
+        font-weight: 500;
+
+        p {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #555;
+        }
+    }
+
+    &-promobox {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+
+        width: 504px;
+        height: 58px;
+        border-radius: 999px;
+        background-color: #eaeaea;
+        overflow: hidden;
+
+        input {
+            padding: 0 20px;
+            flex: 1;
+            font-size: 1.6rem;
+            width: 330px;
+            height: 50px;
+        }
+
+        button {
+            width: 170px;
+            height: 58px;
+            font-size: 1.6rem;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}
